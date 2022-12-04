@@ -29,7 +29,7 @@ if (marksBMI > johnsBMI) {
     console.log(`Johns BMI(${johnsBMI}) is higher than Marks BMI(${marksBMI})`);
 }
 */
-
+/*
 // Challenge #3
 // Gymnastics Teams winner 
 const koalasScores = 97 + 112 + 101;
@@ -46,4 +46,9 @@ if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
 } else {
     console.log("NOBODY Wins");
 }
+*/
+
+// Tip Calculator
+const bill = 100;
+console.log((bill >= 50 && bill <= 300) ? `${bill} + ${bill * .15} = ${bill + bill * .15}` : `${bill} + ${bill * .2} = ${bill + bill * .2}`);
 
