@@ -54,7 +54,7 @@ if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
 const bill = 100;
 console.log((bill >= 50 && bill <= 300) ? `${bill} + ${bill * .15} = ${bill + bill * .15}` : `${bill} + ${bill * .2} = ${bill + bill * .2}`);
 */
-
+/*
 // JS Funcdamentals - Part 2 
 // Gymnastics Part 2 
 const calcAvarage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
@@ -71,3 +71,19 @@ const checkWinner = function (avarageKoalas, avarageDolphins) {
 const dolphisAvarage = calcAvarage(85, 54, 41);
 const koalasAvarage = calcAvarage(23, 34, 27);
 checkWinner(koalasAvarage, dolphisAvarage);
+*/
+
+// TipS Calculator
+const calcTip = bill => (bill >= 50 && bill <= 300) ? `${bill * .15}` : `${bill * .2}`;
+const bills = [125, 555, 44];
+const tips = [];
+for (let i = 0; i < bills.length; i++) {
+    tips[i] = +calcTip(bills[i])
+}
+console.log(tips);
+const totals = [];
+for (let i = 0; i < bills.length; i++) {
+    totals[i] = +bills[i] + +tips[i];
+}
+
+console.log(totals);
