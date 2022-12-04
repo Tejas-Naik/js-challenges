@@ -1,3 +1,4 @@
+// JS Funcdamentals - Part 1
 /*
 // Challenge #1
 const marksMass = 78;
@@ -48,7 +49,25 @@ if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
 }
 */
 
+/*
 // Tip Calculator
 const bill = 100;
 console.log((bill >= 50 && bill <= 300) ? `${bill} + ${bill * .15} = ${bill + bill * .15}` : `${bill} + ${bill * .2} = ${bill + bill * .2}`);
+*/
 
+// JS Funcdamentals - Part 2 
+// Gymnastics Part 2 
+const calcAvarage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
+const checkWinner = function (avarageKoalas, avarageDolphins) {
+    if (avarageKoalas > (avarageDolphins * 2)) {
+        console.log("Koalas Win")
+    } else if (avarageDolphins > (avarageKoalas * 2)) {
+        console.log("Dolphins Win");
+    } else {
+        console.log("NOBODY win");
+    }
+}
+
+const dolphisAvarage = calcAvarage(85, 54, 41);
+const koalasAvarage = calcAvarage(23, 34, 27);
+checkWinner(koalasAvarage, dolphisAvarage);
