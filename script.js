@@ -12,7 +12,7 @@ const markHigherBMI = marksBMI > johnsBMI;
 console.log(markHigherBMI);
 
 */
-
+/*
 // Challenge #2
 // Printing who has more BMI
 const marksMass = 78;
@@ -28,3 +28,22 @@ if (marksBMI > johnsBMI) {
 } else {
     console.log(`Johns BMI(${johnsBMI}) is higher than Marks BMI(${marksBMI})`);
 }
+*/
+
+// Challenge #3
+// Gymnastics Teams winner 
+const koalasScores = 97 + 112 + 101;
+const dolphisScores = 109 + 95 + 106;
+const dolphinsAvarage = dolphisScores / 3;
+const koalasAvarage = koalasScores / 3;
+
+if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
+    console.log("Koalas Win");
+} else if (dolphinsAvarage > koalasAvarage && dolphinsAvarage >= 100) {
+    console.log("Dolphins Win");
+} else if (dolphinsAvarage === koalasAvarage && dolphinsAvarage >= 100 && koalasAvarage >= 100) {
+    console.log("DRAW");
+} else {
+    console.log("NOBODY Wins");
+}
+
