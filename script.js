@@ -88,7 +88,7 @@ for (let i = 0; i < bills.length; i++) {
 
 console.log(totals);
 */
-
+/*
 // BMIs with Objects
 const john = {
     mass: 78,
@@ -109,5 +109,34 @@ const mark = {
 john.calcBMI();
 mark.calcBMI();
 console.log(john.bmi, mark.bmi);
+*/
 
+// Tip calculator with loops
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    let tip = bills[i] <= 300 && bills[i] >= 50 ? bills[i] * .15 : bills[i] * .2;
+    tips[i] = tip;
+    totals[i] = bills[i] + tips[i];
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+const calcAvarage = function (arr) {
+    let sum = 0;
+    for (const num of arr) {
+        sum += num;
+    }
+    return sum / arr.length;
+}
+
+console.log(
+    calcAvarage(bills),
+    calcAvarage(tips),
+    calcAvarage(totals),
+);
 
