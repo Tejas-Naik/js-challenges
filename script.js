@@ -230,7 +230,7 @@ for (const [i, shooter] of game.scored.entries()) {
     console.log(`Goal ${i + 1} : ${shooter}`);
 }
 
-// 2) 
+// 2)
 let sum = 0;
 let length = 0;
 for (const value of Object.values(game.odds)) {
@@ -257,8 +257,8 @@ for (let x of game.scored) {
 
 console.log(scorers);
 */
-
-// 3) 
+/*
+// 3)
 const gameEvents = new Map([
     [17, '⚽ GOAL'],
     [36, '� Substitution'],
@@ -280,14 +280,31 @@ for (const [time, event] of gameEvents) {
 }
 console.log([...new Set(events)]);
 
-// 2) 
+// 2)
 gameEvents.delete(64);
 
 // 3)
 console.log(`An event happened on an avarage of ${Array.from(gameEvents.keys()).pop() / gameEvents.size}`);
 
-// 4) 
+// 4)
 for (const [time, event] of gameEvents) {
     const half = time <= 45 ? "FIRST" : "SECOND";
     console.log(`[${half}HALF] ${time} : ${event}`);
 }
+*/
+
+// Coding Challenge #4
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+    const text = document.querySelector('textarea').value;
+    const rows = text.split("\n");
+    console.log(rows);
+
+    for (const row of rows) {
+        const [first, second] = row.toLowerCase().trim().split("_");
+        const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+        console.log(`${output.padEnd(25, " ")}${"✅".repeat(rows.indexOf(row) + 1)}`);
+    }
+})
