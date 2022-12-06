@@ -110,7 +110,7 @@ john.calcBMI();
 mark.calcBMI();
 console.log(john.bmi, mark.bmi);
 */
-
+/*
 // Tip calculator with loops
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
@@ -139,4 +139,87 @@ console.log(
     calcAvarage(tips),
     calcAvarage(totals),
 );
+*/
 
+// football betting app.
+const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+        [
+            'Neuer',
+            'Pavard',
+            'Martinez',
+            'Alaba',
+            'Davies',
+            'Kimmich',
+            'Goretzka',
+            'Coman',
+            'Muller',
+            'Gnarby',
+            'Lewandowski',
+        ],
+        [
+            'Burki',
+            'Schulz',
+            'Hummels',
+            'Akanji',
+            'Hakimi',
+            'Weigl',
+            'Witsel',
+            'Hazard',
+            'Brandt',
+            'Sancho',
+            'Gotze',
+        ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+        'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+        team1: 1.33,
+        x: 3.25,
+        team2: 6.5,
+    },
+}
+
+// 1)
+const players1 = game.players[0];
+const players2 = game.players[1];
+console.log(players1, players2);
+
+// 2)
+const [gk, ...feildPlayers] = players1;
+console.log(gk, feildPlayers);
+
+// 3)
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// 4)
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
+
+// 5)
+const { team1, x: draw, team2 } = game.odds
+console.log(team1, draw, team2);
+console.log(game.odds);
+
+// 6)
+const printGoals = function (...players) {
+    const playersGoals = [...players]
+    const goals = {}
+    for (const player of playersGoals) {
+        let count = 0;
+        playersGoals.forEach(element => {
+            if (element === player) {
+                count += 1;
+            }
+        });
+        goals[`${player}`] = count;
+    }
+    console.log(goals);
+}
+
+printGoals(...game.scored);
