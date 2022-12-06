@@ -223,3 +223,36 @@ const printGoals = function (...players) {
 }
 
 printGoals(...game.scored);
+
+// #2
+// 1)
+for (const [i, shooter] of game.scored.entries()) {
+    console.log(`Goal ${i + 1} : ${shooter}`);
+}
+
+// 2) 
+let sum = 0;
+let length = 0;
+for (const value of Object.values(game.odds)) {
+    sum += value;
+    length += 1;
+}
+console.log(`The avarage Odd is ${sum / length}`);
+
+// 3)
+console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+console.log(`Odd of draw : ${game.odds.x}`);
+console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+
+// 4)
+const scorers = {};
+
+// for (const shooter of game.scored) {
+//     scorers[shooter] = scorers[shooter] ? scorers[shooter] + 1 : 1;
+// }
+
+for (let x of game.scored) {
+    scorers[x]++ || (scorers[x] = 1);
+}
+
+console.log(scorers);
